@@ -35,8 +35,8 @@ Where:
 
 ### Constants Used
 
-- `T0 = 77°F`: The initial temperature of the CPU.
-- `T_ambient = 77°F`: The ambient room temperature.
+- `T0 = 73°F`: The initial temperature of the CPU.
+- `T_ambient = 74°F`: The ambient room temperature.
 - `k1 = 0.01`: The heat generation constant (adjusts heat rise based on utilization).
 - `k2 = 0.02`: The cooling constant (adjusts the cooling rate).
 

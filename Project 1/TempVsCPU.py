@@ -1,3 +1,9 @@
+# Created by Chloe Brandow and Gabriel Vander Klok
+# Packages used include numpy, matplotlib, and scipy
+# The approach involves modeling CPU temperature as an ODE that accounts for both heat generation and
+# cooling effects, solving the ODE for different CPU utilization percentages, and visualizing the results
+# using a time-temperature plot.
+
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy.integrate import odeint
@@ -5,7 +11,7 @@ from scipy.integrate import odeint
 
 # Define the function for CPU utilization U(t) based on utilization percentage
 def cpu_utilization(utilization_percentage):
-    return utilization_percentage  # Utilization is already in percentage (20%, 50%, etc.)
+    return utilization_percentage
 
 
 # Define the ODE: dT/dt = k1 * U(t) - k2 * (T(t) - T_ambient)
@@ -15,9 +21,9 @@ def temperature_model(T, t, k1, k2, T_ambient, utilization_percentage):
     return dTdt
 
 
-# Fixed constants (in Fahrenheit and no user input)
-T0 = 77  # Initial CPU temperature in Fahrenheit
-T_ambient = 77  # Ambient temperature in Fahrenheit
+# Constants
+T0 = 73  # Initial CPU temperature in Fahrenheit
+T_ambient = 74  # Ambient temperature in Fahrenheit
 k1 = 0.01  # Heat generation constant (utilization to °F conversion factor)
 k2 = 0.02  # Cooling constant (cooling rate in °F per second)
 
@@ -25,7 +31,7 @@ k2 = 0.02  # Cooling constant (cooling rate in °F per second)
 t = np.linspace(0, 500, 1000)
 
 # CPU utilization percentages to simulate
-utilization_percentages = [20, 50, 80, 100]  # In percentages
+utilization_percentages = [20, 50, 80, 100]
 
 # Plotting the results
 plt.figure()
