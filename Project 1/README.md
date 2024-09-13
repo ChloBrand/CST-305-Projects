@@ -60,12 +60,20 @@ The simulation runs for the following CPU utilization percentages:
 
 ## Usage
 
-1. Run the program, and a plot will be generated displaying CPU temperature over time for different CPU utilization levels.
-2. The plot includes a legend, grid, and labels for clarity.
+1. Install the necessary packages listed above.
+2. Navigate to the directory containing the TempVsCPU.py file
+3. Run the program, and a plot will be generated displaying CPU temperature over time for different CPU utilization levels. 
+4. The plot includes a legend, grid, and labels for clarity.
 
 ## Code
 
 ```python
+# Created by Chloe Brandow and Gabriel Vander Klok
+# Packages used include numpy, matplotlib, and scipy
+# The approach involves modeling CPU temperature as an ODE that accounts for both heat generation and
+# cooling effects, solving the ODE for different CPU utilization percentages, and visualizing the results
+# using a time-temperature plot.
+
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy.integrate import odeint
@@ -81,8 +89,8 @@ def temperature_model(T, t, k1, k2, T_ambient, utilization_percentage):
     return dTdt
 
 # Fixed constants (in Fahrenheit and no user input)
-T0 = 77  # Initial CPU temperature in Fahrenheit
-T_ambient = 77  # Ambient temperature in Fahrenheit
+T0 = 73  # Initial CPU temperature in Fahrenheit
+T_ambient = 74  # Ambient temperature in Fahrenheit
 k1 = 0.01  # Heat generation constant (utilization to °F conversion factor)
 k2 = 0.02  # Cooling constant (cooling rate in °F per second)
 
