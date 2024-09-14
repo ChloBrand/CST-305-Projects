@@ -23,7 +23,7 @@ pip install numpy matplotlib scipy
 The simulation uses the following ODE to model the change in CPU temperature over time:
 
 $$
-\frac{{dT}}{{dt}} = k_1 \cdot U(t) - k_2 \cdot (T(t) - T_{ambient})
+\frac{{dT(t)}}{{dt}} = k_1 \cdot U(t) - k_2 \cdot (T(t) - T_{ambient})
 $$
 
 Where:
