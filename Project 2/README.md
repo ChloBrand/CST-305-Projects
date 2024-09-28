@@ -33,6 +33,7 @@ pip install numpy scipy matplotlib
 
 1. Clone or download the repository.
 2. Run the Python script:
+3. The script will display the time taken by each solver (`odeint` and Runge-Kutta) and plot the solutions using `matplotlib`.
 
 ## Code
 ```python
@@ -128,8 +129,6 @@ plt.grid(True)
 plt.tight_layout()
 plt.show()
 ```
-
-3. The script will display the time taken by each solver (`odeint` and Runge-Kutta) and plot the solutions using `matplotlib`.
 
 ## Results
 
