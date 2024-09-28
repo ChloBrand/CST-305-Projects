@@ -1,3 +1,11 @@
+# Created by Chloe Brandow and Gabriel Vander Klok
+# Packages used include numpy, matplotlib, math, timeit, and scipy
+# The implementation uses the built-in odeint function from scipy and a custom
+# 4th-order Runge-Kutta method to solve an ordinary differential equation for
+# comparison. The timeit module is used to measure and compare the performance
+# of both methods, and the results are plotted using matplotlib for visual analysis.
+
+
 import numpy as np
 from scipy.integrate import odeint
 import matplotlib.pyplot as plt
