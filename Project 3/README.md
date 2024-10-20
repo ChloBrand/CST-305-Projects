@@ -1,4 +1,3 @@
-
 # Project 3 - Green's Function and ODE with IVP
 
 **Course**: CST - 305  
