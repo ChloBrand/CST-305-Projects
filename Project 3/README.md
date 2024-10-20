@@ -96,15 +96,6 @@ The following plots are generated:
    - Homogeneous solution for the second equation.
    - General solution for the second equation.
 
-## Project Structure
-
-```
-Project/
-│
-├── main.py         # Python script that solves and visualizes the ODEs
-├── README.md       # Project documentation
-└── requirements.txt  # Optional: List of dependencies (NumPy, Matplotlib)
-```
 
 ### Example Output
 
