@@ -63,7 +63,7 @@ The project visualizes both the **homogeneous** and **general solutions** for ea
 
 ## Code Files
 
-### `main.py`
+### `greensIVP.py`
 
 This file contains the Python code for the project. The equations are solved and plotted using `NumPy` for the mathematical functions and `Matplotlib` for the visualizations.
 
@@ -83,18 +83,18 @@ The following plots are generated:
    ```
 
 2. **Run the Python Script**:  
-   Run the `main.py` script to generate the plots:
+   Run the `greensIVP.py` script to generate the plots:
 
    ```bash
-   python main.py
+   python greensIVP.py
    ```
 
 3. **View the Plots**:  
    After running the script, four separate plots will be displayed:
    - Homogeneous solution for the first equation.
-   - General solution for the first equation.
+   - Greens solution for the first equation.
    - Homogeneous solution for the second equation.
-   - General solution for the second equation.
+   - Greens solution for the second equation.
 
 
 ### Example Output
@@ -104,18 +104,15 @@ The program will display four graphs as output:
 1. **Homogeneous Solution - First Equation**  
    A red dashed plot showing the cosine-based homogeneous solution.
 
-2. **General Solution - First Equation**  
+2. **Greens Solution - First Equation**  
    A blue plot showing the general solution that combines a cosine and constant term.
 
 3. **Homogeneous Solution - Second Equation**  
    A red dashed plot showing the small amplitude oscillations from the homogeneous solution.
 
-4. **General Solution - Second Equation**  
+4. **Greens Solution - Second Equation**  
    A green plot showing a combination of parabolic growth and oscillation.
 
-## License
-
-This project is released under the MIT License.
 
 ## Acknowledgments
 
