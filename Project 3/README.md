@@ -7,7 +7,7 @@
 
 ## Project Overview
 
-This project demonstrates the application of Green's function and solving ordinary differential equations (ODEs) with initial value problems (IVP). The solutions include both the homogeneous and general solutions for two different equations.
+This project demonstrates the application of Green's function and solving ordinary differential equations (ODEs) with initial value problems (IVP). The solutions include both the homogeneous and greens solutions for two different equations.
 
 The code is implemented in Python using `NumPy` for numerical calculations and `Matplotlib` for visualizing the solutions.
 
@@ -25,7 +25,7 @@ y'' + y = 4
   y_h(t) = -4 cos(t)
   ```
 
-- **General Solution**:  
+- **Greens Solution**:  
   ```
   y(t) = -4 cos(t) + 4
   ```
@@ -42,24 +42,24 @@ y'' + 4y = t^2
   y_h(t) = (1/8) cos(2t)
   ```
 
-- **General Solution**:  
+- **Greens Solution**:  
   ```
   y(t) = (1/8) cos(2t) + (1/4) t^2 - (1/8)
   ```
 
 ## Visualization
 
-The project visualizes both the **homogeneous** and **general solutions** for each of the equations using Matplotlib. The solutions are plotted on separate graphs for clarity.
+The project visualizes both the **homogeneous** and **greens solutions** for each of the equations using Matplotlib. The solutions are plotted on separate graphs for clarity.
 
 ### First Equation
 
 - **Homogeneous Solution**: The solution oscillates as a cosine function with an amplitude of 4.
-- **General Solution**: The solution is a cosine function shifted upwards by 4 units.
+- **Greens Solution**: The solution is a cosine function shifted upwards by 4 units.
 
 ### Second Equation
 
 - **Homogeneous Solution**: The solution oscillates with a smaller amplitude, corresponding to the cosine term.
-- **General Solution**: This solution is a combination of a parabolic term and a cosine term.
+- **Greens Solution**: This solution is a combination of a parabolic term and a cosine term.
 
 ## Code Files
 
@@ -69,9 +69,9 @@ This file contains the Python code for the project. The equations are solved and
 
 The following plots are generated:
 1. **Homogeneous Solution for the First Equation**: A cosine oscillation with bounds between -7 and 7.
-2. **General Solution for the First Equation**: A cosine oscillation with a vertical shift of 4, plotted between -5 and 9.
+2. **greens Solution for the First Equation**: A cosine oscillation with a vertical shift of 4, plotted between -5 and 9.
 3. **Homogeneous Solution for the Second Equation**: A small amplitude cosine oscillation with bounds between -1 and 1.
-4. **General Solution for the Second Equation**: A combination of parabolic and oscillatory behavior, plotted with bounds from -5 to 100.
+4. **greens Solution for the Second Equation**: A combination of parabolic and oscillatory behavior, plotted with bounds from -5 to 100.
 
 ### Instructions for Running the Code
 
@@ -105,7 +105,7 @@ The program will display four graphs as output:
    A red dashed plot showing the cosine-based homogeneous solution.
 
 2. **Greens Solution - First Equation**  
-   A blue plot showing the general solution that combines a cosine and constant term.
+   A blue plot showing the greens solution that combines a cosine and constant term.
 
 3. **Homogeneous Solution - Second Equation**  
    A red dashed plot showing the small amplitude oscillations from the homogeneous solution.
