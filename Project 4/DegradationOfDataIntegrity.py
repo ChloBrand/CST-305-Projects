@@ -11,7 +11,6 @@ import matplotlib.pyplot as plt
 def x_one(t):
     return np.exp(-0.05 * t)  # returns solution found from e^At
 
-
 # Part 2 solution 2
 def x_two(t):
     return (-1 * np.exp(-0.05 * t))
@@ -37,3 +36,4 @@ plt.xlim(-100, 100)  # x-window for 0 to 100
 plt.grid()
 plt.legend()
 plt.show()
+

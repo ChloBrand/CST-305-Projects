@@ -61,6 +61,16 @@ plt.show()
 - The code generates and visualizes two ODE solutions that illustrate data degradation over time, using a line plot for better understanding.
 
 ---
+## Explanation of Results
+
+### Exponential Decay
+The term \( e^{-0.05t} \) indicates that the data transfer between the two processors is governed by an exponential decay process. Specifically, the rate at which data moves or is transferred between \( A \) and \( B \) decreases exponentially over time. This means that the initial transfer rate is relatively high, but as time progresses, the transfer rate slows down significantly.
+
+### Direction and Balance
+The positive and negative signs in the expressions \( e^{-0.05t} \) and \( -e^{-0.05t} \) suggest that the data exchange between \( A \) and \( B \) has a balancing effect. One of the terms corresponds to data flowing from \( A \) to \( B \), and the other corresponds to data flowing from \( B \) to \( A \). These flows work against each other to equalize the distribution of data between the two processors.
+
+---
+
 
 ## Visualization
 
