@@ -51,6 +51,13 @@ for state in states:
 - **dt**: The time increment for each step of the simulation, set to `0.01`.
 - **num_steps**: The total number of time steps for the simulation, set to `10000`.
 
+
+### Initial Conditions
+- **xyzs[0]**: The initial conditions for the system, where:
+  - `x` starts at `11.8 KB`, representing the initial file size in the first dimension (rough estimate for an average JPG image).
+  - `y` starts at `4.4 KB`, representing the initial file size in the second dimension (rough estimate for an average PNG image).
+  - `z` starts at `2.4 KB`, representing the initial file size in the third dimension (rough estimate for an average GIF image).
+
 ### Initial Conditions
 - **xyzs[0]**: The initial conditions for the system, where:
   - `x` starts at `11.8`, representing the initial file size in the first dimension.
