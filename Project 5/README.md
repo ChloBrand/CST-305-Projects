@@ -58,12 +58,6 @@ for state in states:
   - `y` starts at `4.4 KB`, representing the initial file size in the second dimension (rough estimate for an average PNG image).
   - `z` starts at `2.4 KB`, representing the initial file size in the third dimension (rough estimate for an average GIF image).
 
-### Initial Conditions
-- **xyzs[0]**: The initial conditions for the system, where:
-  - `x` starts at `11.8`, representing the initial file size in the first dimension.
-  - `y` starts at `4.4`, representing the initial file size in the second dimension.
-  - `z` starts at `2.4`, representing the initial file size in the third dimension.
-
 ### Plotting Results
 The code generates three types of plots:
 1. **3D Attractor Plot**: Visualizes the path of the Lorenz attractor in 3D space.
