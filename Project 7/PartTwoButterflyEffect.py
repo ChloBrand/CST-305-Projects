@@ -109,3 +109,81 @@ plt.title("Customer Arrival Time vs. Number of Customers in Queue")
 plt.grid()
 plt.legend()
 plt.show()
+
+
+# Part 2 Section 3 Code:
+# Define original parameters
+lambda_original = 0.5  # Original arrival rate
+mu_original = 1.0      # Original service rate
+k_values = np.linspace(1, 5, 100)  # Scaling factor k (range from 1 to 5)
+
+
+# Scale the arrival and service rates by factor k
+lambda_scaled = lambda_original * k_values
+mu_scaled = mu_original * k_values
+
+
+# a. Utilization (ρ)
+rho_original = lambda_original / mu_original
+rho_scaled = lambda_scaled / mu_scaled  # Utilization remains constant
+
+
+# b. Throughput (X)
+throughput_scaled = lambda_scaled  # Throughput equals the scaled arrival rate
+
+
+# c. Mean number in the system (E[N])
+E_N_original = rho_original / (1 - rho_original)  # Original mean number in the system
+E_N_scaled = rho_scaled / (1 - rho_scaled)        # Scaled mean number in the system
+
+
+# d. Mean time in the system (E[T])
+E_T_original = 1 / (mu_original - lambda_original)  # Original mean time in the system
+E_T_scaled = 1 / (mu_scaled - lambda_scaled)        # Scaled mean time in the system
+
+
+# Plot the results
+fig, axs = plt.subplots(2, 2, figsize=(14, 12))
+
+
+# Plot Utilization (ρ)
+axs[0, 0].plot(k_values, rho_scaled, label="Utilization (ρ)")
+axs[0, 0].axhline(rho_original, color='red', linestyle='--', label="Original Utilization")
+axs[0, 0].set_title("Utilization (ρ) vs Scaling Factor (k)")
+axs[0, 0].set_xlabel("Scaling Factor (k)")
+axs[0, 0].set_ylabel("Utilization (ρ)")
+axs[0, 0].legend()
+axs[0, 0].grid()
+
+
+# Plot Throughput (X)
+axs[0, 1].plot(k_values, throughput_scaled, label="Throughput (X)", color='orange')
+axs[0, 1].set_title("Throughput (X) vs Scaling Factor (k)")
+axs[0, 1].set_xlabel("Scaling Factor (k)")
+axs[0, 1].set_ylabel("Throughput (X)")
+axs[0, 1].legend()
+axs[0, 1].grid()
+
+
+# Plot Mean Number in the System (E[N])
+axs[1, 0].plot(k_values, E_N_scaled, label="Mean Number in System (E[N])", color='green')
+axs[1, 0].axhline(E_N_original, color='red', linestyle='--', label="Original E[N]")
+axs[1, 0].set_title("Mean Number in System (E[N]) vs Scaling Factor (k)")
+axs[1, 0].set_xlabel("Scaling Factor (k)")
+axs[1, 0].set_ylabel("Mean Number (E[N])")
+axs[1, 0].legend()
+axs[1, 0].grid()
+
+
+# Plot Mean Time in the System (E[T])
+axs[1, 1].plot(k_values, E_T_scaled, label="Mean Time in System (E[T])", color='red')
+axs[1, 1].axhline(E_T_original, color='blue', linestyle='--', label="Original E[T]")
+axs[1, 1].set_title("Mean Time in System (E[T]) vs Scaling Factor (k)")
+axs[1, 1].set_xlabel("Scaling Factor (k)")
+axs[1, 1].set_ylabel("Mean Time (E[T])")
+axs[1, 1].legend()
+axs[1, 1].grid()
+
+
+plt.tight_layout()
+plt.show()
