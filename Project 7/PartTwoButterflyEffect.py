@@ -1,3 +1,12 @@
+# Butterfly Effect
+# Made by Gabriel VanderKlok and Chloe Brandow
+# 12.8.24
+
+# This Python program is designed to analyze queue behavior and the effects of scaling
+# arrival and service rates in a single-server system.
+# pandas, numpy, and matplotlib are used in this program
+
+
 import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
